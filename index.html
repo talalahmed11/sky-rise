@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=0.7">
+  <title>Skyrise Construction</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --accent:#c62828; /* red from logo */
+      --dark:#2f3640;
+      --muted:#9aa3ab;
+      --bg:#1f262b;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:'Cairo',system-ui,Arial,Helvetica,sans-serif;background:linear-gradient(180deg,#1b2125 0%, #262c31 100%);color:#fff}
+
+    .hero{
+      min-height:100vh;
+      display:flex;align-items:center;justify-content:center;padding:40px 20px;
+      background-image:linear-gradient(rgba(15,18,20,0.55),rgba(15,18,20,0.55));
+      background-blend-mode:overlay;
+    }
+
+    .card{
+      width:100%;max-width:1100px;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(0,0,0,0.02));
+      border-radius:18px;padding:28px;display:flex;gap:28px;align-items:center;box-shadow:0 10px 30px rgba(0,0,0,0.6);
+      border:1px solid rgba(255,255,255,0.03);
+      backdrop-filter:blur(6px);
+    }
+
+    .logo-col{flex:0 0 220px;display:flex;align-items:center;justify-content:center}
+    .logo-col img{width:200px;height:auto;object-fit:contain;filter:drop-shadow(0 6px 18px rgba(0,0,0,0.6))}
+
+    .content{flex:1}
+    .eyebrow{color:var(--muted);font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:13px;margin-bottom:8px}
+    h1{margin:0;font-size:40px;line-height:1.02;letter-spacing:1px}
+    h1 .highlight{color:var(--accent)}
+    p.lead{color:var(--muted);margin-top:12px;margin-bottom:18px;font-size:16px}
+
+    .actions{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:10px;font-weight:700;border:none;cursor:pointer}
+    .btn-primary{background:linear-gradient(90deg,var(--accent),#8f1d1d);color:#fff;box-shadow:0 8px 20px rgba(198,40,40,0.18)}
+    .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.08);color:#fff}
+
+    .meta{margin-top:18px;display:flex;gap:18px;flex-wrap:wrap;color:var(--muted);font-size:14px}
+    .meta div{display:flex;flex-direction:row-reverse;gap:8px;align-items:center}
+
+    footer{margin-top:18px;color:var(--muted);font-size:13px}
+
+    /* responsive */
+    @media (max-width:900px){
+      .card{flex-direction:column;text-align:center}
+      .logo-col{order:0}
+      .content{order:1}
+      .logo-col img{width:140px}
+      h1{font-size:32px}
+    }
+
+    @media (max-width:480px){
+      h1{font-size:26px}
+      .logo-col img{width:120px}
+      .card{padding:18px;border-radius:12px}
+      .btn{padding:10px 14px}
+    }
+  </style>
+</head>
+<body>
+  <main class="hero">
+    <section class="card" role="region" aria-label="Skyrise Construction">
+      <div class="logo-col">
+        <img src="img/WhatsApp_Image_2025-09-19_at_02.58.59_b6b829de-removebg-preview.png" alt="Skyrise logo">
+      </div>
+
+      <div class="content">
+        <div class="eyebrow">شركة مقاولات</div>
+        <h1>Skyrise <span class="highlight">Construction</span></h1>
+        <p class="lead">ننفذ مشاريع سكنية وتجارية بمستوى عالمي — تصميم، تنفيذ، إدارة مشاريع. فريقنا يضمن التسليم في الموعد وجودة عالية.</p>
+
+        <div class="actions">
+          <button class="btn btn-primary" onclick="location.href='tel:+201234567890'">📞 اتصل بنا</button>
+          <button class="btn btn-ghost" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">🧱 خدماتنا</button>
+        </div>
+
+        <div class="meta">
+          <div>📍 اسيوط — مصر</div>
+          <div>✉️ info@skyrise.example</div>
+          <div>📞 +20 123467789</div>
+        </div>
+
+        <footer>للاستفسار أو عرض المشروع اتصل بنا أو أرسل ملف المشروع عبر الإيميل.</footer>
+      </div>
+    </section>
+  </main>
+
+  <section id="services" style="padding:40px 20px;background:linear-gradient(180deg,#121417, #0f1315);color:#d7dfe6">
+    <div style="max-width:1100px;margin:0 auto;">
+      <h2 style="margin:6px 0 18px;font-size:22px">خدماتنا</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px">
+        <div style="background:rgba(255,255,255,0.02);padding:18px;border-radius:12px">🛠 تنفيذ وإنشاء</div>
+        <div style="background:rgba(255,255,255,0.02);padding:18px;border-radius:12px">📐 تصميم وإدارة مشاريع</div>
+        <div style="background:rgba(255,255,255,0.02);padding:18px;border-radius:12px">🔧 صيانة وتجديد</div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
