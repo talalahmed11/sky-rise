@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=0.6">
+  <title>Skyrise Construction</title>
+  <style>
+ body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  color: #333;
+  }
+
+ header {
+  background: #111;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* يحط اللوجو في النص */
+  position: relative;
+}
+
+header img {
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+.menu-icon {
+  position: absolute;
+  right: 20px;    /* على اليمين */
+  top: 50%;       /* في النص عموديًا */
+  transform: translateY(-50%);
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.menu-icon span {
+  display: block;
+  height: 3px;
+  background: #fff; 
+  margin: 5px 0;
+  border-radius: 2px;
+}
+
+
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: -220px; /* مخفية خارج الشاشة */
+  width: 200px;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  padding-top: 60px;
+  text-align: center;
+  transition: 0.4s;
+  z-index: 1000;
+}
+.side-menu a {
+  display: block;
+  padding: 15px 0;
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.3s;
+}
+.side-menu a:hover {
+  background: #444;
+}
+.side-menu.open{
+  right: 0;
+}
+
+
+.heross {
+  background: url("img/shivendu-shukla-3yoTPuYR9ZY-unsplash.jpg") center/cover no-repeat;
+  padding: 100px 20px;
+  text-align: center;
+  color: #fff;
+  background-attachment: fixed;
+}
+.heross h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+.heross p {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+
+.contact {
+  padding: 60px 20px;
+}
+.container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+}
+.contact-info h2,
+.contact-form h2 {
+  font-size: 28px;
+  color: #b80000;
+  margin-bottom: 20px;
+}
+.info-box {
+  margin-bottom: 20px;
+}
+
+.info-box h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 5px;
+}
+.info-box p {
+  color: #555;
+}
+
+footer {
+  background: #111;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 36px; }
+  .hero p  {font-size: 18px;}
+}
+
+
+
+   
+  </style>
+</head>
+<body>
+
+  <header>
+   <a href="index.html"> <img src="img/WhatsApp_Image_2025-09-19_at_03.34.48_7008111d-removebg-preview.png" alt="Skyrise Logo"></a>
+    <div class="menu-icon" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <nav class="side-menu" id="sideMenu">
+    <a href="index2.html">About</a>
+    <a href="index3.html">Services</a>
+    <a href="index4.html">Contact</a>
+  </nav>
+
+  <script>
+    function toggleMenu(){
+      document.getElementById('sideMenu').classList.toggle('open');
+    }
+  </script>
+
+
+  </header>
+
+  <section class="heross">
+    <div class="heross-text">
+      <h1>Contact Us</h1>
+      <p>Let’s build something great together</p>
+    </div>
+  </section>
+
+  
+  <section class="contact">
+    <div class="container">
+      <div class="contact-info">
+        <h2>Get in Touch</h2>
+        <p>We’d love to hear from you. Reach us via any of the methods below:</p>
+
+        <div class="info-box">
+          <h3>📍 Address</h3>
+          <p> Nile Street, Assuit, Egypt</p>
+        </div>
+
+        <div class="info-box">
+          <h3>📞 Phone</h3>
+          <p>‪+20 100 123 4567‬</p>
+        </div>
+
+        <div class="info-box">
+          <h3>📧 Email</h3>
+          <p>info@skyriseconstruction.com</p>
+        </div>
+      </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 Skyrise Construction. All rights reserved.</p>
+  </footer>
+
+
+</body>
+</html>
