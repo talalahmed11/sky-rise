@@ -17,7 +17,7 @@
   padding: 20px;
   display: flex;
   align-items: center;
-  justify-content: center; /* يحط اللوجو في النص */
+  justify-content: center; 
   position: relative;
 }
 
@@ -28,8 +28,8 @@ header img {
 
 .menu-icon {
   position: absolute;
-  right: 20px;    /* على اليمين */
-  top: 50%;       /* في النص عموديًا */
+  right: 20px;    
+  top: 50%;   
   transform: translateY(-50%);
   width: 30px;
   height: 22px;
@@ -49,7 +49,7 @@ header img {
 .side-menu {
   position: fixed;
   top: 0;
-  right: -220px; /* مخفية خارج الشاشة */
+  right: -220px; 
   width: 200px;
   height: 100%;
   background: rgba(0,0,0,0.9);
@@ -72,7 +72,48 @@ header img {
 .side-menu.open{
   right: 0;
 }
+
+
+
+
+
+
+
+.hero{position:relative;height:100vh;overflow:hidden;}
+#bg-video{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:-1;}
+.overlay{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+background:rgba(0,0,0,0.4);padding:40px;border-radius:10px;}
+.overlay h1{font-size:40px;margin-bottom:15px;color:#b80000;}
+.overlay p{margin-bottom:20px; color: #fff;}
+.btn{display:inline-block;padding:12px 30px;background:#b80000;color:#fff;
+text-decoration:none;border-radius:6px;font-weight:bold;transition:0.3s;}
+.btn:hover{background:#fff;}
+
+.counters{background:#fff;display:flex;justify-content:center;gap:40px;padding:60px 20px;}
+.counter span{font-size:40px;color:#b80000;display:block;margin-bottom:10px;}
+
+.projects{padding:60px 20px;background:#fff;}
+.projects h2{color:#b80000;margin-bottom:30px;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
+.card{position:relative;overflow:hidden;border-radius:10px;}
+.card img{width:100%;display:block;transition:0.4s;}
+.card:hover img{transform:scale(1.1);}
+.info{position:absolute;bottom:0;width:100%;background:rgba(0,0,0,0.6);
+padding:10px;color:#b80000;font-weight:bold;}
+
+.contact{background:#fff;padding:60px 20px;}
+.contact h2{color:#b80000;margin-bottom:20px;}
+.contact{color: #111;}
+
+
+.footer {
+   background: #111;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
    
+}
   </style>
 </head>
 <body>
@@ -100,5 +141,56 @@ header img {
 
 
   </header>
+
+
+   <section class="hero">
+    <video autoplay muted loop id="bg-video">
+      <source src="video/215239.mp4" type="video/mp4">
+    </video>
+    <div class="overlay">
+      <h1>Building the Future, Brick by Brick</h1>
+      <p>Over 15 years of excellence in construction and development</p>
+      <a href="#projects" class="btn">View Our Projects</a>
+    </div>
+  </section>
+
+  
+  <section class="counters">
+    <div class="counter">
+      <span data-count="120">0</span>
+      <p>Completed Projects</p>
+    </div>
+    <div class="counter">
+      <span data-count="50">0</span>
+      <p>Happy Clients</p>
+    </div>
+    <div class="counter">
+      <span data-count="15">0</span>
+      <p>Years of Experience</p>
+    </div>
+  </section>
+
+  
+  <section id="projects" class="projects">
+    <h2>Our Latest Projects</h2>
+    <div class="grid">
+      <div class="card"><img src=""><div class="info">Residential Tower – Cairo</div></div>
+      <div class="card"><img src=""><div class="info">Business Complex – Dubai</div></div>
+      <div class="card"><img src=""><div class="info">Luxury Hotel – Jeddah</div></div>
+    </div>
+  </section>
+   <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>Leave your details and we’ll get back to you soon</p>
+    <a href="mailto:info@skyrise.com" class="btn">Send Email</a>
+  </section>
+
+   <footer class="footer">
+    <p>© 2025 Skyrise Construction. All rights reserved.</p>
+  </footer>
+
+  <script src="main.js"></script>
+
+
 </body>
 </html>
